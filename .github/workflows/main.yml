@@ -35,23 +35,23 @@ jobs:
 
     # list contents of src to verify that classess compiled 
       - name: List contents of src directory after compile
-        working-directory: ./src/st2123456
+        working-directory: ./src/unittest1
         run: ls
         
         
        # copy compiled classes to test directory 
       - name : copy compiled classes to testresources directory 
-        working-directory: ./src/st2123456
+        working-directory: ./src/unittest1
         run: cp -t  "../../test/st2123456" Message.class St2123456.class
         
         #copy compiled tests 
       - name : copy compiled Test classes to testresources directory 
-        working-directory: ./test/st2123456
+        working-directory: ./test/unittest1
         run: cp -t  "../../testresources/" Message.class St2123456.class 
         
         # list contents or directory
       - name: List contents test package
-        working-directory: ./test/st2123456
+        working-directory: ./test/unittest1
         run: ls
         
         #run Message Class tests and output report 
